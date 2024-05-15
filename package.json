@@ -4,10 +4,12 @@
   "description": "SPL - Aplicación Monolítica",
   "main": "index.js",
   "scripts": {
+    "install-frontend": "cd frontend && npm install",
+    "install-backend": "cd backend && npm install",
+    "build-frontend": "cd frontend && npm run build",
+    "build": "npm-run-all install-frontend install-backend build-frontend",
     "start-backend": "cd backend && node index.js",
     "start-frontend": "cd frontend && npm run start",
-    "build-frontend": "cd frontend && npm run build",
-    "build": "npm-run-all --parallel build-frontend",
     "start": "npm-run-all --parallel start-backend start-frontend"
   },
   "keywords": [],
